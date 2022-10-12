@@ -256,7 +256,7 @@ def login():
             return redirect(url_for('inbox.show'))
 
         if request.method == "POST":
-            username = esacape(request.form["username"])
+            username = escape(request.form["username"])
             password = escape(request.form["password"])
 
             if not username:
